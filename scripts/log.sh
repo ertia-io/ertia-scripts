@@ -23,6 +23,7 @@ if (($# > 6)); then
 
 fi
 
+echo "Sending log file to ${LOKI_URL}"
 curl -u "${USER}:${PASSWORD}" -XPOST -H "Content-Type: application/json" "${LOKI_URL}" -d "${DATA}" 
  
 
